@@ -11,7 +11,7 @@
       shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
       when:
         - not homebrew_check.stat.exists
-  
+
   roles:
-   - install_homebrew_packages
-   - customize_shell
+    - install_homebrew_packages
+    - customize_shell
