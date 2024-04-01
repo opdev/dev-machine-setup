@@ -1,5 +1,5 @@
 ---
-- name: setup a fedora dev system
+- name: Setup a fedora dev system
   hosts: localhost
   roles:
    - install_dnf_packages

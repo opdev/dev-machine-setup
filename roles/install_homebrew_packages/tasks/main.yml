@@ -1,2 +1,15 @@
 ---
 # tasks file for install_homebrew_packages
+
+# Ensure Homebrew is up to date
+- name: Ensure Homebrew is up to date
+  homebrew:
+    update_homebrew: true
+    upgrade_all: true
+
+# Ensure packages are present
+- name: Ensure packages are installed
+  homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ Brew_packages }}"

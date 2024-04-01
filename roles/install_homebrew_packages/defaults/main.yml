@@ -1,2 +1,9 @@
 ---
 # defaults file for install_homebrew_packages
+Brew_packages: 
+      - kubernetes-cli
+      - openshift-cli
+      - helm
+      - go
+      - operator-sdk
+      - podman
