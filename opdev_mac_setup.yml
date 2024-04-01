@@ -1,0 +1,6 @@
+---
+- name: setup a mac dev system
+  hosts: localhost
+  roles:
+   - install_homebrew_packages
+   - customize_shell

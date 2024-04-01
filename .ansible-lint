@@ -1,0 +1,12 @@
+profile: moderate
+exclude_paths:
+  - requirements.yml
+  - .github/
+  - OWNERS
+  - README.md
+  - LICENSE
+parseable: true
+strict: true
+offline: false
+skip_list:
+  - yaml[empty-lines]

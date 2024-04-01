@@ -1,0 +1,20 @@
+name: ansible-lint
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    name: Ansible Lint on PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Install galaxy colletions
+        run: ansible-galaxy install -r requirements.yml
+
+      - name: Run ansible-lint
+        uses: ansible/ansible-lint@main
