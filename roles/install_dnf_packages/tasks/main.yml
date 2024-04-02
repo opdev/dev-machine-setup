@@ -1,2 +1,9 @@
 ---
 # tasks file for install_dnf_packages
+- name: Ensure packages are installed
+  ansible.builtin.dnf:
+    name:
+      "{{ install_dnf_packages_list }}"
+    state: latest
+    lock_timeout: 180
+  become: true

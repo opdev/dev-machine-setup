@@ -1,2 +1,11 @@
 ---
 # defaults file for install_dnf_packages
+install_dnf_packages_list:
+  - helm
+  - go
+  - podman
+  - buildah
+  - jq
+  - make
+  - git
+  - containers-common
