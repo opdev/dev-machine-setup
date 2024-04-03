@@ -7,3 +7,11 @@ install_homebrew_packages_list:
   - go
   - operator-sdk
   - podman
+  - kustomize
+  - minikube
+  - skopeo
+  - terraform
+  - jq
+  - yq
+  - homebrew/cask/podman-desktop
+  - homebrew/cask/visual-studio-code
