@@ -11,7 +11,7 @@ install_homebrew_packages_list:
   - minikube
   - skopeo
   - terraform
+  - jq
   - yq
   - homebrew/cask/podman-desktop
-  - homebrew/cask/tunnelblick
   - homebrew/cask/visual-studio-code
