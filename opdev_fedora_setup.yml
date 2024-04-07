@@ -3,5 +3,3 @@
   hosts: localhost
   roles:
    - install_dnf_packages
-   - configure_vpn
-   - customize_shell
