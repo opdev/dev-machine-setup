@@ -1,0 +1,30 @@
+---
+# tasks file for install_additional_tools
+
+- name: Check if openshift cli is installed
+  stat:
+    path: /usr/local/bin/oc
+  register: oc_exists
+
+- name: Check if operator-sdk is installed
+  stat:
+    path: /usr/local/bin/operator-sdk
+  register: osdk_exists
+
+- name: Install openshift-cli
+  ansible.builtin.shell: |
+    curl -L https://mirror.openshift.com/pub/openshift-v4/clients/oc/latest/linux/oc.tar.gz --output oc.tar.gz
+    tar -C /usr/local/bin -xzf oc.tar.gz
+    rm oc.tar.gz
+  become: true
+  when: not oc_exists.stat.exists
+
+- name: Install operator-sdk
+  ansible.builtin.shell: |
+    export ARCH=$(case $(uname -m) in x86_64) echo -n amd64 ;; aarch64) echo -n arm64 ;; *) echo -n $(uname -m) ;; esac)
+    export OS=$(uname | awk '{print tolower($0)}')
+    export OPERATOR_SDK_DL_URL=https://github.com/operator-framework/operator-sdk/releases/download/v1.34.1
+    curl -LO ${OPERATOR_SDK_DL_URL}/operator-sdk_${OS}_${ARCH}
+    chmod +x operator-sdk_${OS}_${ARCH} && mv operator-sdk_${OS}_${ARCH} /usr/local/bin/operator-sdk
+  become: true
+  when: not osdk_exists.stat.exists

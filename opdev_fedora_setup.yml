@@ -3,3 +3,4 @@
   hosts: localhost
   roles:
    - install_dnf_packages
+   - install_additional_tools
