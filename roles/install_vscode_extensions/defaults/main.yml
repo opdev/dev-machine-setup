@@ -1,0 +1,39 @@
+---
+# defaults file for install_vscode_extensions
+install_vscode_extensions_list:
+  - alphabotsec.vscode-eclipse-keybindings
+  - github.copilot
+  - github.copilot-chat
+  - github.vscode-github-actions
+  - github.vscode-pull-request-github
+  - golang.go
+  - ms-azuretools.vscode-docker
+  - ms-kubernetes-tools.kind-vscode
+  - ms-kubernetes-tools.vscode-kubernetes-tools
+  - ms-python.debugpy
+  - ms-python.isort
+  - ms-python.python
+  - ms-python.vscode-pylance
+  - ms-toolsai.jupyter
+  - ms-toolsai.jupyter-keymap
+  - ms-toolsai.jupyter-renderers
+  - ms-toolsai.vscode-jupyter-cell-tags
+  - ms-toolsai.vscode-jupyter-slideshow
+  - ms-vscode-remote.remote-containers
+  - ms-vscode-remote.remote-ssh
+  - ms-vscode-remote.remote-ssh-edit
+  - ms-vscode.live-server
+  - ms-vscode.makefile-tools
+  - ms-vscode.remote-explorer
+  - octref.vetur
+  - omartawfik.github-actions-vscode
+  - redhat.java
+  - redhat.vscode-yaml
+  - visualstudioexptteam.intellicode-api-usage-examples
+  - visualstudioexptteam.vscodeintellicode
+  - vscjava.vscode-java-debug
+  - vscjava.vscode-java-dependency
+  - vscjava.vscode-java-pack
+  - vscjava.vscode-java-test
+  - vscjava.vscode-maven
+  - yzhang.markdown-all-in-one

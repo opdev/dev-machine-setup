@@ -14,3 +14,4 @@
 
   roles:
     - install_homebrew_packages
+    - install_vscode_extensions
