@@ -3,9 +3,15 @@
   hosts: localhost
 
   pre_tasks:
+    - name: Determine architecture
+      command: uname -p
+      register: arch
+    - name: Set path for homebrew
+      set_fact:
+        brew_path: "{{ '/opt/homebrew/bin' if arch.stdout == 'arm' else '/usr/local/bin/brew' }}"
     - name: Check if Homebrew is installed
       stat:
-        path: /usr/local/bin/brew
+        path: "{{ brew_path }}"
       register: homebrew_check
     - name: Install Homebrew if needed
       shell: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
